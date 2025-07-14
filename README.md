@@ -3,43 +3,34 @@ The objective of this analysis is to create a linear regression model to accurat
 The analysis will include steps to understanding both the individual and combined implication of lifestyle factor on insurance charges for a medical scheme member. Will uncover the lifestyle factors that are both significant and irrelevant to the increase in insurance chargers and primarily build a model to generate insurance chargers. 
 ## Explanatory Data Analysis (EDA): 
 Data exploration is a crucial step that needs to be taken before attempting to build a model. EDA helps an analysist to understand the given data. The EDA process identifies issues that may affect machine learning, ensures that data will be of suitable quality and identifies key patterns and trends that may need to be taken into consideration when building a predictive model (Ray, 2024). Various functions from the Pandas, Seaborn and Matplotlib libraries will be used to assist the EDA process. The EDA will include the following steps.
-> **Data Collection** : The first step to analysing the data is to retrieve it from the given csv file. The Pandas.read_csv() method will be used to read the data from the file and store is within a Pandas data frame object. The Pandas data frames can hold huge amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). 
-> **Data Cleaning**: To help ensure data quality missing vales, duplicates and inconsistencies in data types must be handled.
+**Data Collection** : The first step to analysing the data is to retrieve it from the given csv file. The Pandas.read_csv() method will be used to read the data from the file and store is within a Pandas data frame object. The Pandas data frames can hold huge amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). 
+**Data Cleaning**: To help ensure data quality missing vales, duplicates and inconsistencies in data types must be handled.
 - Missing Values: panda.isnull().sum() will be used to search the dataset and return the sum of missing values for each column. Identified values will either be dropped or replaced with relevant columns average.
 - Duplicated data: panda.duplicated() will be used to identify and create a list of all duplicates within the dataset. The list of duplicates will then be removed from the dataset to avoid introducing bias. 
 - Data type consistency: panda.info() will be used to identify data types in the given dataset. This is important to ensure all data is numerical and as input for a linear algorithm. Data types that are not quantitative will be encoded or transformed to numeric form.   
-### Data Transformation: 
-To use machine learning algorithms, all data must be in numerical form, either float or int data types. The categorical features sex, smoker and region must therefore be transformed. 
+**Data Transformation**: To use machine learning algorithms, all data must be in numerical form, either float or int data types. The categorical features sex, smoker and region must therefore be transformed. 
 - Encode data: Features in the dataset that are the object data type will be encoded to transform to numeric form. LabelEncoder from the Scikit-learn preprocessing module will convert the values within sex, smoker and region features. The features will contain numbers to label each different category (Novogroder, 2024).  
-### Univariate Analysis: 
+## Univariate Analysis: 
 This stage of analysis focuses on analysing a single feature of the dataset at a time. Depending on whether a feature is categorical or numerical the analysis will differ (Ray, 2024). For features that are continuous values, assessment will include statistical summary to understand the distribution, central tendency and the variability for each feature within the dataset (Ray, 2024). Features that are categorical the frequency and count of the feature will be assessed using visualisation such as bar chart or count plots (Ray, 2024). 
 
-### Bivariate Analysis: 
+## Bivariate Analysis: 
 This stage of analysis focuses on two variables, to uncover the association and distribution between them (Ray, 2024). To understand the relationship between two variables visualisation tools such as seaborn and matplotlib will be used to create correlation heatmaps, pair plots, distribution plots and scatterplots.
 
-### Multivariate Analysis:
+## Multivariate Analysis:
 This is analysis extends the bivariate analysis but is carried out on more than two features. The analysis stage is aimed at understanding the relationship between multiple variables. Tools from seaborn and matplotlib will be used to visualise the relations between variables. Plots such as distribution plots and scatterplots will carry out this stage (Deepanshi, 2023; KIm, 2023). 
 
 ## Pre Processing: 
 Preprocessing are the final tasks that must be carried out to ensure that the data meets all requirements to be useful machine learning purposes (Novogroder, 2024). Tasks include scaling, encoding and splitting data to ensure that the model performs well (Novogroder, 2024). This stage will include various modules from the Scikit-learn library to prepare the data for processing.
-### Data scaling:
-Each feature in the dataset may have a different scale, this leads the model  to perceive features with larger values to have greater significance and produce inaccurate predictions. Scaling the dataset ensure that features have fair contribution. The Scikit MinMaxScaler() and StandardScaler() methods will be considered to scale the features within the dataset (GeeksforGeeks, 2025a).  
-### Feature Selection: 
-Feature selection will be performed through either backward elimination or sklearn.selectKBest(). This is important as to only include features that offer meaning contribution to the prediction. By only including significant  features the performance and accuracy of the model will be enhanced(Imarticus, 2024) .
-### Splitting data: 
-Data will be split before input into model. The data will be split into an 80:20 ratio, 80 percent of the data being used as training data and the remaining 20 percent for test data. This is an important step so that after training the model can be tested on unseen data to assess its performance (Gillis, 2024). 
+**Data scaling**:Each feature in the dataset may have a different scale, this leads the model  to perceive features with larger values to have greater significance and produce inaccurate predictions. Scaling the dataset ensure that features have fair contribution. The Scikit MinMaxScaler() and StandardScaler() methods will be considered to scale the features within the dataset (GeeksforGeeks, 2025a).  
+**Feature Selection**: Feature selection will be performed through either backward elimination or sklearn.selectKBest(). This is important as to only include features that offer meaning contribution to the prediction. By only including significant  features the performance and accuracy of the model will be enhanced(Imarticus, 2024) .
+**Splitting data**: Data will be split before input into model. The data will be split into an 80:20 ratio, 80 percent of the data being used as training data and the remaining 20 percent for test data. This is an important step so that after training the model can be tested on unseen data to assess its performance (Gillis, 2024). 
 ## Build and Evaluate Model
-### Model training:
-The models used for this analysis will be the Scikit-learn Linear Regression model and Lasso Regression model. Linear Regression model has been selected as the native model to apply a linear regression algorithm. Lasso selected for its built-in feature selection capabilities (Orange Data Mining Library, 2015). 
-### Evaluation:
-To evaluate the performance of the models, the Scikit-learn library will be used. The library contains a metrics methods that provide the coefficient of determination (R^2) , mean absolute error and mean squared error for the results or prediction of a trained model (Deepanshi, 2023; Kim, 2023)  These metrics can be used to assess the performance and accuracy of a model.
-### Visualisation of results:
-Seaborn and Matplotlib will be used to display the result (Deepanshi, 2023; KIm, 2023). Plots such as  
+**Model training**: The models used for this analysis will be the Scikit-learn Linear Regression model and Lasso Regression model. Linear Regression model has been selected as the native model to apply a linear regression algorithm. Lasso selected for its built-in feature selection capabilities (Orange Data Mining Library, 2015). 
+**Evaluation**: To evaluate the performance of the models, the Scikit-learn library will be used. The library contains a metrics methods that provide the coefficient of determination (R^2) , mean absolute error and mean squared error for the results or prediction of a trained model (Deepanshi, 2023; Kim, 2023)  These metrics can be used to assess the performance and accuracy of a model.
+**Visualisation of results**: Seaborn and Matplotlib will be used to display the result (Deepanshi, 2023; KIm, 2023). Plots such as  
 - True vs Predicted Values, to compare predictions to actual datapoint and assess linearity   
 - Residuals vs Predicted Values, to assess the Homoscedasticity of model of model results. 
 - Normal Q-Q Residual Plot, to assess if residuals are normally distributed  
-
-
 ## Account Creation
 ![image](https://github.com/user-attachments/assets/ad999f14-c608-4595-9a18-e6b5d9e34319)
 
