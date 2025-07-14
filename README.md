@@ -43,10 +43,12 @@ Preprocessing are the final tasks that must be carried out to ensure that the da
 - Normal Q-Q Residual Plot, to assess if residuals are normally distributed  
 ## Exploratory Data Analysis
 **Data Collection**: The data was first retrieved form the given csv file using Pandas.read_csv() method as displayed in figure 1. The data was stored in a Pandas data frame, theses data frames are able to store large amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). The Pandas.head() method was used to confirm data was successfully retrieved and assess rows and columns of the data. 
-<div style="text-align: center;">
-  <img width="940" height="441" alt="image" src="https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03" />
-  <p style="font-style: italic; margin-top: 8px;">Figure 1: Example image caption</p>
-</div>
+<p align="center">
+  <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03" />
+  <br>
+  <em>Figure 1: Storing Data</em>
+</p>
+
 
 ## Account Creation
 ![image](https://github.com/user-attachments/assets/ad999f14-c608-4595-9a18-e6b5d9e34319](https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03))
