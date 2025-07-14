@@ -250,11 +250,17 @@ The coefficient of determination (R^2)  for the Lasso model of 0.78 is close 1 w
 <img width="700" height="509" alt="image" src="https://github.com/user-attachments/assets/17150aa2-22aa-4316-9959-99f1ede6f0e0" />
 	<br>
 </div> 
+
+---
+
 ### Residuals vs Predicted Values, to assess the Homoscedasticity of model of model result
 <div align="center">
 	<img width="700" height="493" alt="image" src="https://github.com/user-attachments/assets/df95edec-5b2b-41fd-96fa-3c0486a6b2bd" />
 	<br>
 </div> 
+
+---
+
 ### Normal Q-Q Residual Plot, to assess if residuals are normally distributed
 <div align="center">
 	<img width="700" height="503" alt="image" src="https://github.com/user-attachments/assets/115f80b0-1e66-4a88-afce-dcfa1d0b472d" />
