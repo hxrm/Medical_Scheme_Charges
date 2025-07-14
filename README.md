@@ -89,6 +89,7 @@ To identify the data types `panda.info()` method called. The method returned the
 	<br>
   <em>Figure 6: Descriptive Statistics </em>
 </p>
+---
 * **Age Feature**: The mean 39.20 is very close to the median 39, this indicates that there is symmetrical distribution in the spread of data. The std of 14.0 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of age in the dataset. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members age falling between 27 and 64 years old.
 * **BMI**: The mean 30.6 is very close to the median 30.4, this indicates that there is symmetrical distribution in the spread of data. The std of 6.09 is a low value compared to the features mean, implying that there is low variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members BMI is between 26.29 and 34.69. The difference between the 75th percentile of 34.69 and max value 53.1 further suggests the presence of outliers in the feature. 
 * **Children**: The mean 1.09 is higher than the median 1.0, this indicates that the distribution of data is positively skewed, most likely due to the max value of 5 children for a member. The std of 1.2 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members number of children is between 0 and . 
@@ -97,7 +98,7 @@ To identify the data types `panda.info()` method called. The method returned the
 
 Univariate analysis for categorical features was carried out using visualisation tools from seaborn and matplotlib. Seaborn count plots were used to understand the distribution sex, region, charges and smokers in the dataset. The below figure 7 shows the count plot for smokers and non-smokers members in the dataset. The counter plot indicates that the number of members who are non-smoke in the dataset is greater than the number of smokers in the dataset.
 <p align="center">
-	<img width="800" height="636" alt="image" src="https://github.com/user-attachments/assets/79508759-2d21-43ed-93fa-d9dea6c9bbb3" />
+	<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/79508759-2d21-43ed-93fa-d9dea6c9bbb3" />
 	<br>
   <em>Figure 7: Smokers Count Plot</em>
 </p>
@@ -105,9 +106,8 @@ Univariate analysis for categorical features was carried out using visualisation
 
 
 **Bivariate Analysis**: This stage of analysis focuses on uncovering the association and distribution between two variables. To understand the relationship between two variables visualisation tools such as seaborn and matplotlib will be used to create correlation heatmaps, pair plots, distribution plots and scatterplots. 
-<img width="751" height="586" alt="image" src="https://github.com/user-attachments/assets/d09228d4-cc9a-4b25-87ca-fb1231cc0b9d" />
 <p align="center">
-	<img width="800" height="636" alt="image" src="https://github.com/user-attachments/assets/79508759-2d21-43ed-93fa-d9dea6c9bbb3" />
+	<img width="600" height="500"  alt="image" src="https://github.com/user-attachments/assets/d09228d4-cc9a-4b25-87ca-fb1231cc0b9d"  />
 	<br>
   <em>Figure 8: Correlation Heatmap</em>
 </p>
@@ -139,7 +139,7 @@ The plot of Charges Distribution by Smoker Status, confirmed the strength of the
 **Multivariate Analysis**: multivariate analysis extends the bivariate analysis by further investigating the significant finding. In this can the correlation between smoker and the charged rate of members. The analysis stage was aimed at understanding the relationship between multiple variables. Tools from seaborn and matplotlib will be used to visualise the relations between variables. Plots such as distribution plots and scatterplots will carry out this stage (Deepanshi, 2023; Kim, 2023). 
 The bar plot in figure 10, provides an insight into the distribution of insurance charges for both smokers according to sex.
 <p align="center">
-	<img width="800" height="509" alt="image" src="https://github.com/user-attachments/assets/b7fa3e40-9698-4a64-a906-e56d6b6350ee" />
+	<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/b7fa3e40-9698-4a64-a906-e56d6b6350ee" />
 	<br>
   <em>Figure 10: Average Charges for Smokers and Non-Smokers</em>
 </p>
@@ -150,7 +150,7 @@ High and low insurance rates are charges for both females and males, therefore t
 
 The below scatter plots in figure 11, provides an insight into the distribution of insurance charges across member’s age. Separated by smoking status. The below plots were intended to further to further investigate the influence of chargers and smoking status in the dataset.
 <p align="center">
-	<img width="800"  height="467" alt="image" src="https://github.com/user-attachments/assets/4feb7708-ceca-4b82-81ef-7fd85c581bf1" />
+	<img width="600"  height="400" alt="image" src="https://github.com/user-attachments/assets/4feb7708-ceca-4b82-81ef-7fd85c581bf1" />
 	<br>
   <em>Figure 11: Charges vs Age (Smokers and Non-Smokers)</em>
 </p>
@@ -164,7 +164,7 @@ These finding indicates that there is a positive correlation between the age and
 
 The below scatter plots in figure 12, provides an insight into the distribution of insurance charges across member BMI. Separated by smoking status. The below plots were intended to further to further investigate the influence of chargers and smoking status in the dataset.
 <p align="center">
-	<img width="800"  height="467" alt="image" src="https://github.com/user-attachments/assets/1bc119ef-af57-40b0-bfe4-b26ca3aa2602" />
+	<img width="600"  height="400" alt="image" src="https://github.com/user-attachments/assets/1bc119ef-af57-40b0-bfe4-b26ca3aa2602" />
 	<br>
   <em>Figure 12: Charge vs BMI (Non-smoking and Smoking)</em>
 </p>
