@@ -60,7 +60,7 @@ Preprocessing are the final tasks that must be carried out to ensure that the da
 </div>
 To find duplicates in data `panda.duplicated()` method was used to identify and create a list of all duplicates within the dataset. The list of duplicates returned one duplicate found in the in row 581 of the dataset as shown below in figure 3. This row was dropped from the dataset to avoid bias in the model. 
 <div align="center">
-	  <img width="600" height="120" alt="image" src="https://github.com/user-attachments/assets/fa881c86-b712-44fe-8ae4-1a020edec4bf" />
+	  <img width="700" height="120" alt="image" src="https://github.com/user-attachments/assets/fa881c86-b712-44fe-8ae4-1a020edec4bf" />
 	<br>
   <em>Figure 1: Duplicates </em>
 </div>
@@ -77,7 +77,7 @@ To identify the data types `panda.info()` method called. The method returned the
 
 **Data Transformation**: To use machine learning algorithms, all data must be in numerical form, either float or int data types. The categorical features found, sex, smoker and region, are stored as the object data type therefore they were encoded. LabelEncoder from the Scikit-learn preprocessing module to encode the features by mapping each feature to a numbers value. These numbers were then you to distinguish the different categories as seen below in figure 5 (Novogroder, 2024). 
 <div align="center">
-	<img width="600" height="200" alt="image" src="https://github.com/user-attachments/assets/7e86cc33-1bdf-4c53-8169-0b1e0d2b1486" />
+	<img width="700" height="200" alt="image" src="https://github.com/user-attachments/assets/7e86cc33-1bdf-4c53-8169-0b1e0d2b1486" />
 	<br>
   <em>Figure 5: Encoding </em>
 </div>
@@ -155,7 +155,7 @@ The plot of Charges Distribution by Smoker Status, confirmed the strength of the
 **Multivariate Analysis**: multivariate analysis extends the bivariate analysis by further investigating the significant finding. In this can the correlation between smoker and the charged rate of members. The analysis stage was aimed at understanding the relationship between multiple variables. Tools from seaborn and matplotlib will be used to visualise the relations between variables. Plots such as distribution plots and scatterplots will carry out this stage (Deepanshi, 2023; Kim, 2023). 
 The bar plot in figure 10, provides an insight into the distribution of insurance charges for both smokers according to sex.
 <div align="center">
-	<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/b7fa3e40-9698-4a64-a906-e56d6b6350ee" />
+	<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/b7fa3e40-9698-4a64-a906-e56d6b6350ee" />
 	<br>
   <em>Figure 10: Average Charges for Smokers and Non-Smokers</em>
 </div>
@@ -169,7 +169,7 @@ High and low insurance rates are charges for both females and males, therefore t
 
 The below scatter plots in figure 11, provides an insight into the distribution of insurance charges across member’s age. Separated by smoking status. The below plots were intended to further to further investigate the influence of chargers and smoking status in the dataset.
 <div align="center">
-	<img width="600"  height="400" alt="image" src="https://github.com/user-attachments/assets/4feb7708-ceca-4b82-81ef-7fd85c581bf1" />
+	<img width="700"  height="400" alt="image" src="https://github.com/user-attachments/assets/4feb7708-ceca-4b82-81ef-7fd85c581bf1" />
 	<br>
   <em>Figure 11: Charges vs Age (Smokers and Non-Smokers)</em>
 </div>
@@ -186,7 +186,7 @@ These finding indicates that there is a positive correlation between the age and
 
 The below scatter plots in figure 12, provides an insight into the distribution of insurance charges across member BMI. Separated by smoking status. The below plots were intended to further to further investigate the influence of chargers and smoking status in the dataset.
 <div align="center">
-	<img width="600"  height="400" alt="image" src="https://github.com/user-attachments/assets/1bc119ef-af57-40b0-bfe4-b26ca3aa2602" />
+	<img width="700"  height="400" alt="image" src="https://github.com/user-attachments/assets/1bc119ef-af57-40b0-bfe4-b26ca3aa2602" />
 	<br>
   <em>Figure 12: Charge vs BMI (Non-smoking and Smoking)</em>
 </div>
@@ -206,7 +206,7 @@ The finding from the EDA conclude that features BMI, smoker and age have and inf
 
 Data scaling: The Scikit `StandardScaler()` methods was used to scale features within the dataset in preparation for model training. This was to ensure larger values such as BMI and Age did not have disproportionate significance in the model which would result in inaccurate predictions.
 <div align="center">
-	<img width="380" height="175" alt="image" src="https://github.com/user-attachments/assets/631dba8f-0415-4110-ae91-c1d78e6d44ba" />
+	<img width="480" height="175" alt="image" src="https://github.com/user-attachments/assets/631dba8f-0415-4110-ae91-c1d78e6d44ba" />
 	<br>
   <em>Figure 13: Scaled Data</em>
 </div>
@@ -224,7 +224,7 @@ Splitting data: The data used for model training was split into an 80:20 ratio, 
 ## Build and Evaluate Model
 The models used for this analysis will be the Scikit-learn Linear Regression model and Lasso Regression model. Linear Regression model has been selected as the native model to apply a linear regression algorithm. Lasso selected for its built-in feature selection capabilities, which is a result of the regularization (Orange Data Mining Library, 2015). The lasso model adds a penalty to the cost function to reduce the coefficients for each variable. The degree of the regulation is controlled by the alpha parameter. Due to regularization convergence in the gradient of descent happens as a slower rate, for this reason the tolerance threshold for convergence must either be decreased or the max iterations increased to for the model to perform well (Orange Data Mining Library, 2015).For these reasons the lasso model had been trained an alpha of 10 and a tolerance of 0,0001, as seen below in figure 15. 
 <div align="center">
-	<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/4927b5d0-7ebb-456a-a224-2a9f988e5111" />
+	<img width="600" height="200" alt="image" src="https://github.com/user-attachments/assets/4927b5d0-7ebb-456a-a224-2a9f988e5111" />
 	<br>
   <em>Figure 15: Lasso Model</em>
 </div> 
@@ -232,11 +232,11 @@ The models used for this analysis will be the Scikit-learn Linear Regression mod
 To evaluate the performance of the models, the Scikit-learn library will be used. The library contains a metrics method that provide the coefficient of determination (R^2) , mean absolute error and mean squared error for the results or prediction of a trained model (Deepanshi, 2023; Kim, 2023). The result indicate the Lasso Regression model has a better performance than the Linear regression as seen below on figure 16 and 17. 
 <div align="center" style="display: flex; justify-content: center; gap: 20px;">
   <div>
-    <img width="350" height="124" alt="Lasso Results" src="https://github.com/user-attachments/assets/0c31dcee-c179-44ec-95d8-cfb490909bef" />
+    <img width="450" height="124" alt="Lasso Results" src="https://github.com/user-attachments/assets/0c31dcee-c179-44ec-95d8-cfb490909bef" />
     <p><em>Figure 16: Lasso Results</em></p>
   </div>
   <div>
-    <img width="350" height="113" alt="Linear Results" src="https://github.com/user-attachments/assets/7b30d2bf-b710-4f4b-a6c8-9d99c67fea70" />
+    <img width="450" height="113" alt="Linear Results" src="https://github.com/user-attachments/assets/7b30d2bf-b710-4f4b-a6c8-9d99c67fea70" />
     <p><em>Figure 17: Linear Results</em></p>
   </div>
 </div>
@@ -245,17 +245,17 @@ The coefficient of determination (R^2)  for the Lasso model of 0.78 is close 1 w
 
 --- 
 
-*True vs Predicted Values, to compare predictions to actual datapoint and assess linearity*
+### True vs Predicted Values, to compare predictions to actual datapoint and assess linearity
 <div align="center">
 <img width="700" height="509" alt="image" src="https://github.com/user-attachments/assets/17150aa2-22aa-4316-9959-99f1ede6f0e0" />
 	<br>
 </div> 
-*Residuals vs Predicted Values, to assess the Homoscedasticity of model of model result*
+### Residuals vs Predicted Values, to assess the Homoscedasticity of model of model result
 <div align="center">
 	<img width="700" height="493" alt="image" src="https://github.com/user-attachments/assets/df95edec-5b2b-41fd-96fa-3c0486a6b2bd" />
 	<br>
 </div> 
-*Normal Q-Q Residual Plot, to assess if residuals are normally distributed*
+### Normal Q-Q Residual Plot, to assess if residuals are normally distributed
 <div align="center">
 	<img width="700" height="503" alt="image" src="https://github.com/user-attachments/assets/115f80b0-1e66-4a88-afce-dcfa1d0b472d" />
 	<br>
