@@ -124,16 +124,17 @@ Univariate analysis for categorical features was carried out using visualisation
 </div>
 Figure 8 above display a correlation heat map. This was used to shows the correlation between all variables in a dataset. The Pandas method `dataframe.corr()` is used to calculate the correlation coefficient for each variable in the dataset (NumFOCUS Inc, 2025). The method returns a float between 1 and -1, indicating the correlation between each pair of variables (NumFOCUS Inc, 2025). 1 indicates perfect correlation, 0 indicates no correlation and -1 perfect negative correlation. This visual the matrix of correlations using the seaborn heatmap (Jain, 2024).  
 ---
-**Notable insights were**: 
-- The charges variable is positively correlated with age, BMI and children variables. Each of these variables have a positive linear relationship with the target variable. Therefore, for an increase in any one of the variables charges will increase too. 
+
+**Notable insights were**:
+- The charges variable is positively correlated with age, BMI and children variables. Each of these variables have a positive linear relationship with the target variable. Therefore, for an increase in any one of the variables charges will increase too.
 - The correlation heat map confirms minimal correlation between independent variables, indicating that there is no multicollinearity that will contradict the multicollinearity assumption of linear regression.
 - 0.79 highest correlation between a pair of variables. It defines a strong positive linear relationship between smoker and charges variables.
-With the strongest correlation between features smoker and charges, I was led to more thoroughly investigate the correlation between smoker and charges and further, the influence smoker and charges may have on other features in the dataset. 
+With the strongest correlation between features smoker and charges, I was led to more thoroughly investigate the correlation between smoker and charges and further, the influence smoker and charges may have on other features in the dataset.
 
 The below plot provides in figure 9 shows an in-depth view of the distribution of insurance charges for both smokers and non-smokers. 
 
 <p align="center">
-	<img width="800" height="654" alt="image" src="https://github.com/user-attachments/assets/f48b977f-a21f-45d7-927b-deb1c6633444" />
+	<img width="600" height="530" alt="image" src="https://github.com/user-attachments/assets/f48b977f-a21f-45d7-927b-deb1c6633444" />
 	<br>
   <em>Figure 9: Charges Distribution by Smoker Status</em>
 </p>
