@@ -10,6 +10,7 @@ Data exploration is a crucial step that needs to be taken before attempting to b
 - Missing Values: panda.isnull().sum() will be used to search the dataset and return the sum of missing values for each column. Identified values will either be dropped or replaced with relevant columns average.
 - Duplicated data: panda.duplicated() will be used to identify and create a list of all duplicates within the dataset. The list of duplicates will then be removed from the dataset to avoid introducing bias. 
 - Data type consistency: panda.info() will be used to identify data types in the given dataset. This is important to ensure all data is numerical and as input for a linear algorithm. Data types that are not quantitative will be encoded or transformed to numeric form.   
+
 **Data Transformation**: To use machine learning algorithms, all data must be in numerical form, either float or int data types. The categorical features sex, smoker and region must therefore be transformed. 
 - Encode data: Features in the dataset that are the object data type will be encoded to transform to numeric form. LabelEncoder from the Scikit-learn preprocessing module will convert the values within sex, smoker and region features. The features will contain numbers to label each different category (Novogroder, 2024).
     
@@ -24,18 +25,28 @@ This is analysis extends the bivariate analysis but is carried out on more than 
 
 ## Pre Processing: 
 Preprocessing are the final tasks that must be carried out to ensure that the data meets all requirements to be useful machine learning purposes (Novogroder, 2024). Tasks include scaling, encoding and splitting data to ensure that the model performs well (Novogroder, 2024). This stage will include various modules from the Scikit-learn library to prepare the data for processing.
+
 **Data scaling**:Each feature in the dataset may have a different scale, this leads the model  to perceive features with larger values to have greater significance and produce inaccurate predictions. Scaling the dataset ensure that features have fair contribution. The Scikit MinMaxScaler() and StandardScaler() methods will be considered to scale the features within the dataset (GeeksforGeeks, 2025a).  
+
 **Feature Selection**: Feature selection will be performed through either backward elimination or sklearn.selectKBest(). This is important as to only include features that offer meaning contribution to the prediction. By only including significant  features the performance and accuracy of the model will be enhanced(Imarticus, 2024) .
+
 **Splitting data**: Data will be split before input into model. The data will be split into an 80:20 ratio, 80 percent of the data being used as training data and the remaining 20 percent for test data. This is an important step so that after training the model can be tested on unseen data to assess its performance (Gillis, 2024). 
+
 ## Build and Evaluate Model
 **Model training**: The models used for this analysis will be the Scikit-learn Linear Regression model and Lasso Regression model. Linear Regression model has been selected as the native model to apply a linear regression algorithm. Lasso selected for its built-in feature selection capabilities (Orange Data Mining Library, 2015). 
+
 **Evaluation**: To evaluate the performance of the models, the Scikit-learn library will be used. The library contains a metrics methods that provide the coefficient of determination (R^2) , mean absolute error and mean squared error for the results or prediction of a trained model (Deepanshi, 2023; Kim, 2023)  These metrics can be used to assess the performance and accuracy of a model.
+
 **Visualisation of results**: Seaborn and Matplotlib will be used to display the result (Deepanshi, 2023; KIm, 2023). Plots such as  
 - True vs Predicted Values, to compare predictions to actual datapoint and assess linearity   
 - Residuals vs Predicted Values, to assess the Homoscedasticity of model of model results. 
 - Normal Q-Q Residual Plot, to assess if residuals are normally distributed  
+## Exploratory Data Analysis
+**Data Collection**: The data was first retrieved form the given csv file using Pandas.read_csv() method as displayed in figure 1. The data was stored in a Pandas data frame, theses data frames are able to store large amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). The Pandas.head() method was used to confirm data was successfully retrieved and assess rows and columns of the data. 
+<img width="940" height="441" alt="image" src="https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03" />
+
 ## Account Creation
-![image](https://github.com/user-attachments/assets/ad999f14-c608-4595-9a18-e6b5d9e34319)
+![image](https://github.com/user-attachments/assets/ad999f14-c608-4595-9a18-e6b5d9e34319](https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03))
 
 ### Navigating to Registration:
    - Find and click on the "Register" link on the login page. 
