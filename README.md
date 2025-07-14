@@ -3,8 +3,7 @@ The objective of this analysis is to create a linear regression model to accurat
 The analysis will include steps to understanding both the individual and combined implication of lifestyle factor on insurance charges for a medical scheme member. Will uncover the lifestyle factors that are both significant and irrelevant to the increase in insurance chargers and primarily build a model to generate insurance chargers. 
 ## Explanatory Data Analysis (EDA): 
 Data exploration is a crucial step that needs to be taken before attempting to build a model. EDA helps an analysist to understand the given data. The EDA process identifies issues that may affect machine learning, ensures that data will be of suitable quality and identifies key patterns and trends that may need to be taken into consideration when building a predictive model (Ray, 2024). Various functions from the Pandas, Seaborn and Matplotlib libraries will be used to assist the EDA process. The EDA will include the following steps.
-### Data Collection:
-The first step to analysing the data is to retrieve it from the given csv file. The Pandas.read_csv() method will be used to read the data from the file and store is within a Pandas data frame object. The Pandas data frames can hold huge amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). 
+> * Data Collection* : The first step to analysing the data is to retrieve it from the given csv file. The Pandas.read_csv() method will be used to read the data from the file and store is within a Pandas data frame object. The Pandas data frames can hold huge amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). 
 ### Data Cleaning:
 To help ensure data quality missing vales, duplicates and inconsistencies in data types must be handled.
 - Missing Values: panda.isnull().sum() will be used to search the dataset and return the sum of missing values for each column. Identified values will either be dropped or replaced with relevant columns average.
@@ -19,7 +18,8 @@ This stage of analysis focuses on analysing a single feature of the dataset at a
 ### Bivariate Analysis: 
 This stage of analysis focuses on two variables, to uncover the association and distribution between them (Ray, 2024). To understand the relationship between two variables visualisation tools such as seaborn and matplotlib will be used to create correlation heatmaps, pair plots, distribution plots and scatterplots.
 
-### Multivariate Analysis: This is analysis extends the bivariate analysis but is carried out on more than two features. The analysis stage is aimed at understanding the relationship between multiple variables. Tools from seaborn and matplotlib will be used to visualise the relations between variables. Plots such as distribution plots and scatterplots will carry out this stage (Deepanshi, 2023; KIm, 2023). 
+### Multivariate Analysis:
+This is analysis extends the bivariate analysis but is carried out on more than two features. The analysis stage is aimed at understanding the relationship between multiple variables. Tools from seaborn and matplotlib will be used to visualise the relations between variables. Plots such as distribution plots and scatterplots will carry out this stage (Deepanshi, 2023; KIm, 2023). 
 
 ## Pre Processing: 
 Preprocessing are the final tasks that must be carried out to ensure that the data meets all requirements to be useful machine learning purposes (Novogroder, 2024). Tasks include scaling, encoding and splitting data to ensure that the model performs well (Novogroder, 2024). This stage will include various modules from the Scikit-learn library to prepare the data for processing.
