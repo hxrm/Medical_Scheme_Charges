@@ -44,43 +44,43 @@ Preprocessing are the final tasks that must be carried out to ensure that the da
 
 ## Exploratory Data Analysis
 **Data Collection**: The data was first retrieved form the given csv file using `Pandas.read_csv()` method as displayed in figure 1. The data was stored in a Pandas data frame, theses data frames are able to store large amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). The `Pandas.head()` method was used to confirm data was successfully retrieved and assess rows and columns of the data. 
-<p align="center">
+<div align="center">
   <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03" />
   <br>
   <em>Figure 1: Storing Data</em>
-</p>
+</div>
 
 **Data Cleaning:**: `panda.isnull().sum()` was used to the dataset for missing values and return the sum of missing values for each column. There were no missing values found in the dataset, this can be seen in figure 2 below. 
 
 
-<p align="center">
+<div align="center">
   <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/12f82654-4767-46c7-857b-1a33086ca356" />
   <br>
   <em>Figure 1: Missing Values</em>
-</p>
+</div>
 To find duplicates in data `panda.duplicated()` method was used to identify and create a list of all duplicates within the dataset. The list of duplicates returned one duplicate found in the in row 581 of the dataset as shown below in figure 3. This row was dropped from the dataset to avoid bias in the model. 
-<p align="center">
+<div align="center">
 	  <img width="600" height="120" alt="image" src="https://github.com/user-attachments/assets/fa881c86-b712-44fe-8ae4-1a020edec4bf" />
 	<br>
   <em>Figure 1: Duplicates </em>
-</p>
+</div>
 
 To identify the data types `panda.info()` method called. The method returned the below information about the dataset features. The method found that the 7 features within the dataset was a combination of ints, floats and objects, as shown in below in figure 4. 
 - 2 of the columns, age and children are int datatypes and therefore suitable for a machine learning algorithms input. 
 - 2 of the columns, charges and BMI are floats datatypes are too suitable as input for machine learning algorithms 
 - 3 of the column’s datatypes are objects or string values which need to be converted to numerical values for to be used as input for the machine learning algorithms    
-<p align="center">
+<div align="center">
 	<img width="800" height="321" alt="image" src="https://github.com/user-attachments/assets/c964d985-8efe-4ad1-8aa7-1579925bc6b1" />
 	<br>
   <em>Figure 4: Datatypes </em>
-</p>
+</div>
 
 **Data Transformation**: To use machine learning algorithms, all data must be in numerical form, either float or int data types. The categorical features found, sex, smoker and region, are stored as the object data type therefore they were encoded. LabelEncoder from the Scikit-learn preprocessing module to encode the features by mapping each feature to a numbers value. These numbers were then you to distinguish the different categories as seen below in figure 5 (Novogroder, 2024). 
-<p align="center">
+<div align="center">
 	<img width="600" height="200" alt="image" src="https://github.com/user-attachments/assets/7e86cc33-1bdf-4c53-8169-0b1e0d2b1486" />
 	<br>
   <em>Figure 5: Encoding </em>
-</p>
+</div>
 
 **Univariate Analysis**  
 This stage of analysis focused on analysing individual features in the dataset. For features with continuous values, the `pandas.describe()` method was used to print descriptive statistics. The summary uncovered the distribution, central tendency, and variability of each numeric feature in the dataset (Ray, 2024).  
@@ -109,11 +109,11 @@ Figure 6 displays the descriptive statistics:
 
 
 Univariate analysis for categorical features was carried out using visualisation tools from seaborn and matplotlib. Seaborn count plots were used to understand the distribution sex, region, charges and smokers in the dataset. The below figure 7 shows the count plot for smokers and non-smokers members in the dataset. The counter plot indicates that the number of members who are non-smoke in the dataset is greater than the number of smokers in the dataset.
-<p align="center">
+<div align="center">
 	<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/79508759-2d21-43ed-93fa-d9dea6c9bbb3" />
 	<br>
   <em>Figure 7: Smokers Count Plot</em>
-</p>
+</div>
 
 
 **Bivariate Analysis**: This stage of analysis focuses on uncovering the association and distribution between two variables. To understand the relationship between two variables visualisation tools such as seaborn and matplotlib will be used to create correlation heatmaps, pair plots, distribution plots and scatterplots. 
@@ -123,6 +123,7 @@ Univariate analysis for categorical features was carried out using visualisation
   <em>Figure 8: Correlation Heatmap</em>
 </div>
 Figure 8 above display a correlation heat map. This was used to shows the correlation between all variables in a dataset. The Pandas method `dataframe.corr()` is used to calculate the correlation coefficient for each variable in the dataset (NumFOCUS Inc, 2025). The method returns a float between 1 and -1, indicating the correlation between each pair of variables (NumFOCUS Inc, 2025). 1 indicates perfect correlation, 0 indicates no correlation and -1 perfect negative correlation. This visual the matrix of correlations using the seaborn heatmap (Jain, 2024).  
+
 ---
 
 **Notable insights were**:
@@ -133,15 +134,17 @@ With the strongest correlation between features smoker and charges, I was led to
 
 The below plot provides in figure 9 shows an in-depth view of the distribution of insurance charges for both smokers and non-smokers. 
 
-<p align="center">
+<div align="center">
 	<img width="600" height="530" alt="image" src="https://github.com/user-attachments/assets/f48b977f-a21f-45d7-927b-deb1c6633444" />
 	<br>
   <em>Figure 9: Charges Distribution by Smoker Status</em>
-</p>
+</div>
+
+---
 
 *Smokers (Peach)*:
 - The plot show there are fewer members with smoking status within the dataset. The bars representing smoker, do not exceed 25 on the y-axis showing a significant difference in the count for smoking vs non-smoking members. 
-- The graph shows a bimodal distribution, with peaks approximately falling between $10,000 to $30,000 and $30,000 to $60,000. This distribution suggests that other features may have a strong contribution to a decrease in the charged insurance fee despite smoking status (Frost, 2022). 
+- The graph shows a bimodal distribution, with peaks approximately falling between $10,000 to $30,000 and $30,000 to $60,000. This distribution suggests that other features may have a strong contribution to a decrease in the charged insurance fee despite smoking status (Frost, 2022).\ 
 *Smokers (Blue)*:
 - The plot show that most members in dataset are of non-smoking status. The bars representing non-smoker, ranges across all values on the y-axis showing a significant difference in the count for smoking vs non-smoking members. 
 - the graph shows a right skewed distribution, with non-smoking members incurring charges of $1,121 (min value) to approximately $15 000. The upper tail of the non-smoking curve does fall within higher charge rate, indicating that there are features may have a strong contribution to an increase in the charged insurance fee despite smoking status.  
@@ -151,22 +154,28 @@ The plot of Charges Distribution by Smoker Status, confirmed the strength of the
 
 **Multivariate Analysis**: multivariate analysis extends the bivariate analysis by further investigating the significant finding. In this can the correlation between smoker and the charged rate of members. The analysis stage was aimed at understanding the relationship between multiple variables. Tools from seaborn and matplotlib will be used to visualise the relations between variables. Plots such as distribution plots and scatterplots will carry out this stage (Deepanshi, 2023; Kim, 2023). 
 The bar plot in figure 10, provides an insight into the distribution of insurance charges for both smokers according to sex.
-<p align="center">
+<div align="center">
 	<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/b7fa3e40-9698-4a64-a906-e56d6b6350ee" />
 	<br>
   <em>Figure 10: Average Charges for Smokers and Non-Smokers</em>
-</p>
+</div>
+
+---
+
 - Non-smoker: For both male and female members, lower insurance charges are incurred by non-smokers
 - Smoker: For both male and female members, higher insurance charges are incurred by smokers.
 High and low insurance rates are charges for both females and males, therefore the sex of a member when concerning charges are indifferent.This indicated that the sex of a member had no significant influence on the rate of charges on a member. 
 
 
 The below scatter plots in figure 11, provides an insight into the distribution of insurance charges across member’s age. Separated by smoking status. The below plots were intended to further to further investigate the influence of chargers and smoking status in the dataset.
-<p align="center">
+<div align="center">
 	<img width="600"  height="400" alt="image" src="https://github.com/user-attachments/assets/4feb7708-ceca-4b82-81ef-7fd85c581bf1" />
 	<br>
   <em>Figure 11: Charges vs Age (Smokers and Non-Smokers)</em>
-</p>
+</div>
+
+---
+
 Scatter plot 1 (Charge vs age by Non-Smoking Members): 
 - By plotting a regression line, a positive correlation between age and charges can be observed for non-smoking members. This indicates the insurance charge for a member increase with their age. Therefore, younger members receive lower rates than older members.
 Scatter plot 2 (Charge vs age by Smoking Members):
@@ -176,11 +185,13 @@ Scatter plot 2 (Charge vs age by Smoking Members):
 These finding indicates that there is a positive correlation between the age and charge features in the dataset, suggesting that age too has significance in the rate of charge for a member. When combined with the smoking feature, the rate of charges becomes even larger. 
 
 The below scatter plots in figure 12, provides an insight into the distribution of insurance charges across member BMI. Separated by smoking status. The below plots were intended to further to further investigate the influence of chargers and smoking status in the dataset.
-<p align="center">
+<div align="center">
 	<img width="600"  height="400" alt="image" src="https://github.com/user-attachments/assets/1bc119ef-af57-40b0-bfe4-b26ca3aa2602" />
 	<br>
   <em>Figure 12: Charge vs BMI (Non-smoking and Smoking)</em>
-</p>
+</div>
+
+---
 
 Scatter plot 1 (Charge vs BMI of non-smoking members): 
 - By plotting a regression line, a moderate positive correlation can be observed between BMI and charges for non-smoking members. This indicates the insurance charge of a member increases with a higher BMI. Therefore, overweight and obese members receive higher charges.
@@ -192,13 +203,62 @@ These finding suggesting that BMI feature has significance influence on the rate
 The finding from the EDA conclude that features BMI, smoker and age have and influence on the dependent variable, charges. 
 
 **Pre Processing**: The final tasks carried out before training the model included scaling, encoding and splitting data to ensure that the model performs well (Novogroder, 2024). Various modules from the Scikit-learn library were used to prepare the data for processing.
-- Data scaling: The Scikit `StandardScaler()` methods was used to scale features within the dataset in preparation for model training. This was to ensure larger values such as BMI and Age did not have disproportionate significance in the model which would result in inaccurate predictions.
-  <img width="380" height="175" alt="image" src="https://github.com/user-attachments/assets/631dba8f-0415-4110-ae91-c1d78e6d44ba" />
 
-- Feature Selection: Feature selection will be performed by both backward elimination and `sklearn.selectKBest()` to compare results. SelectKBest was used with the `f_regression` parameter and a max output of 3. The method selected the best based upon the F-value, which indicates the variance between each feature and the dependent variable. The features are scored according to the significance of their variance (Kavya D, 2023). Backward elimination selects the best features based upon the p-value which indicates probability of a features significance. The best features for selections by removing features that are not significant (GeeksforGeeks, 2025b).  Both methods nominated the same features, smoker, age and BMI. Which are consistent with EDA finding, the results are shown below in figure 14.
-- <img width="940" height="296" alt="image" src="https://github.com/user-attachments/assets/d632494e-3355-4a9a-b4cc-0ad9d37be4fb" />
+Data scaling: The Scikit `StandardScaler()` methods was used to scale features within the dataset in preparation for model training. This was to ensure larger values such as BMI and Age did not have disproportionate significance in the model which would result in inaccurate predictions.
+<div align="center">
+	<img width="380" height="175" alt="image" src="https://github.com/user-attachments/assets/631dba8f-0415-4110-ae91-c1d78e6d44ba" />
+	<br>
+  <em>Figure 13: Scaled Data</em>
+</div>
+  
+Feature Selection: Feature selection will be performed by both backward elimination and `sklearn.selectKBest()` to compare results. SelectKBest was used with the `f_regression` parameter and a max output of 3. The method selected the best based upon the F-value, which indicates the variance between each feature and the dependent variable. The features are scored according to the significance of their variance (Kavya D, 2023). Backward elimination selects the best features based upon the p-value which indicates probability of a features significance. The best features for selections by removing features that are not significant (GeeksforGeeks, 2025b).  Both methods nominated the same features, smoker, age and BMI. Which are consistent with EDA finding, the results are shown below in figure 14.
+<div align="center">
+	<img width="600" height="220" alt="image" src="https://github.com/user-attachments/assets/d632494e-3355-4a9a-b4cc-0ad9d37be4fb" />
+	<br>
+  <em>Figure 14: Scaled Data</em>
+</div> 
+
+Splitting data: The data used for model training was split into an 80:20 ratio, 80 percent of the data being used as training data and the remaining 20 percent for test data. This is an important step so that after training the model can be tested on unseen data to assess its performance (Gillis, 2024). The selected features sex, BMI and age were used to train the model. 
 
 
+## Build and Evaluate Model
+The models used for this analysis will be the Scikit-learn Linear Regression model and Lasso Regression model. Linear Regression model has been selected as the native model to apply a linear regression algorithm. Lasso selected for its built-in feature selection capabilities, which is a result of the regularization (Orange Data Mining Library, 2015). The lasso model adds a penalty to the cost function to reduce the coefficients for each variable. The degree of the regulation is controlled by the alpha parameter. Due to regularization convergence in the gradient of descent happens as a slower rate, for this reason the tolerance threshold for convergence must either be decreased or the max iterations increased to for the model to perform well (Orange Data Mining Library, 2015).For these reasons the lasso model had been trained an alpha of 10 and a tolerance of 0,0001, as seen below in figure 15. 
+<div align="center">
+	<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/4927b5d0-7ebb-456a-a224-2a9f988e5111" />
+	<br>
+  <em>Figure 15: Lasso Model</em>
+</div> 
+
+To evaluate the performance of the models, the Scikit-learn library will be used. The library contains a metrics method that provide the coefficient of determination (R^2) , mean absolute error and mean squared error for the results or prediction of a trained model (Deepanshi, 2023; Kim, 2023). The result indicate the Lasso Regression model has a better performance than the Linear regression as seen below on figure 16 and 17. 
+<div align="center" style="display: flex; justify-content: center; gap: 20px;">
+  <div>
+    <img width="350" height="124" alt="Lasso Results" src="https://github.com/user-attachments/assets/0c31dcee-c179-44ec-95d8-cfb490909bef" />
+    <p><em>Figure 16: Lasso Results</em></p>
+  </div>
+  <div>
+    <img width="350" height="113" alt="Linear Results" src="https://github.com/user-attachments/assets/7b30d2bf-b710-4f4b-a6c8-9d99c67fea70" />
+    <p><em>Figure 17: Linear Results</em></p>
+  </div>
+</div>
+
+The coefficient of determination (R^2)  for the Lasso model of 0.78 is close 1 well the Linear model falls slightly lower. This implies, that 78% percent variance is explained by the model.  The mean absolute error of the lasso model indicates that results deviated by $4192.78 
+
+
+*True vs Predicted Values, to compare predictions to actual datapoint and assess linearity*
+<div align="center">
+<img width="940" height="509" alt="image" src="https://github.com/user-attachments/assets/17150aa2-22aa-4316-9959-99f1ede6f0e0" />
+	<br>
+</div> 
+*Residuals vs Predicted Values, to assess the Homoscedasticity of model of model result*
+<div align="center">
+	<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/4927b5d0-7ebb-456a-a224-2a9f988e5111" />
+	<br>
+</div> 
+*Normal Q-Q Residual Plot, to assess if residuals are normally distributed*
+<div align="center">
+	<img width="940" height="503" alt="image" src="https://github.com/user-attachments/assets/115f80b0-1e66-4a88-afce-dcfa1d0b472d" />
+	<br>
+</div> 
 ## References
 Ajaykumar, 2024. Data Science: Guide to Encoding Nominal Categorical Features. | by Ajaykumar Dev | Medium. [online] Available at: <https://medium.com/@nikaljeajay36/data-science-guide-to-encoding-nominal-categorical-features-bf3e622b1133> [Accessed 23 April 2025].
 Akinkugbe, A., 2024. When to Use Linear Regression. Introduction | by Ayo Akinkugbe | Medium. [online] Available at: <https://medium.com/@ayoakinkugbe/when-to-use-linear-regression-6b7057ebd01f> [Accessed 23 April 2025].
