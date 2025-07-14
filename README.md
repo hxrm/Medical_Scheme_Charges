@@ -82,20 +82,6 @@ To identify the data types `panda.info()` method called. The method returned the
   <em>Figure 5: Encoding </em>
 </p>
 
-
-**Univariate Analysis**: This stage of analysis focused on analysing individual feature in the dataset. For features that are continuous values, the `panda.describe()` method was used to print the descriptive statistics for the DataFrame. The summary uncovered the distribution, central tendency and the variability for each numeric feature within the dataset (Ray, 2024). Figure 6 displays the descriptive statistics.
-<p align="center">
-	<img width="800" height="429" alt="image" src="https://github.com/user-attachments/assets/e8c99772-6b1b-4036-a4af-49463234d732" />
-	<br>
-  <em>Figure 6: Descriptive Statistics </em>
-</p>
----
--**Age Feature**: The mean 39.20 is very close to the median 39, this indicates that there is symmetrical distribution in the spread of data. The std of 14.0 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of age in the dataset. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members age falling between 27 and 64 years old.
-- **BMI**: The mean 30.6 is very close to the median 30.4, this indicates that there is symmetrical distribution in the spread of data. The std of 6.09 is a low value compared to the features mean, implying that there is low variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members BMI is between 26.29 and 34.69. The difference between the 75th percentile of 34.69 and max value 53.1 further suggests the presence of outliers in the feature. 
-* **Children**: The mean 1.09 is higher than the median 1.0, this indicates that the distribution of data is positively skewed, most likely due to the max value of 5 children for a member. The std of 1.2 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members number of children is between 0 and . 
-* **Charges**: The mean $13 270 is much higher than the median charge $9 382, this indicates that the distribution of data is positively skewed, most likely due to the max value of $63 770. The std of $12 110 is a larger value compared to the features mean, implying that there is high variability within the spread of insurance charges. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members pay charges between $4 740 and $16 639. The larger difference between the 75th percentile and max value further suggests the presence of outliers in the feature.
-
-
 **Univariate Analysis**  
 This stage of analysis focused on analysing individual features in the dataset. For features with continuous values, the `pandas.describe()` method was used to print descriptive statistics. The summary uncovered the distribution, central tendency, and variability of each numeric feature in the dataset (Ray, 2024).  
 Figure 6 displays the descriptive statistics:
@@ -115,7 +101,7 @@ Figure 6 displays the descriptive statistics:
   The mean (30.6) is close to the median (30.4), indicating symmetry. The standard deviation (6.09) indicates low variability. 50% of members have a BMI between 26.29 and 34.69. The max value (53.1) suggests outliers are present.
 
 - **Children**:  
-  The mean (1.09) is higher than the median (1.0), suggesting a positive skew likely caused by the max value of 5 children. The standard deviation (1.2) indicates moderate variability. 50% of members have between 0 and [value missing] children.
+  The mean (1.09) is higher than the median (1.0), suggesting a positive skew likely caused by the max value of 5 children. The standard deviation (1.2) indicates moderate variability. 50% of members have between 0 and 2 children.
 
 - **Charges**:  
   The mean ($13,270) is much higher than the median ($9,382), indicating a positively skewed distribution. The standard deviation ($12,110) shows high variability. 50% of members pay between $4,740 and $16,639. The max value ($63,770) suggests the presence of outliers.
@@ -130,15 +116,15 @@ Univariate analysis for categorical features was carried out using visualisation
 </p>
 
 
-
 **Bivariate Analysis**: This stage of analysis focuses on uncovering the association and distribution between two variables. To understand the relationship between two variables visualisation tools such as seaborn and matplotlib will be used to create correlation heatmaps, pair plots, distribution plots and scatterplots. 
-<p align="center">
+<div align="center">
 	<img width="600" height="500"  alt="image" src="https://github.com/user-attachments/assets/d09228d4-cc9a-4b25-87ca-fb1231cc0b9d"  />
 	<br>
   <em>Figure 8: Correlation Heatmap</em>
-</p>
+</div>
 Figure 8 above display a correlation heat map. This was used to shows the correlation between all variables in a dataset. The Pandas method `dataframe.corr()` is used to calculate the correlation coefficient for each variable in the dataset (NumFOCUS Inc, 2025). The method returns a float between 1 and -1, indicating the correlation between each pair of variables (NumFOCUS Inc, 2025). 1 indicates perfect correlation, 0 indicates no correlation and -1 perfect negative correlation. This visual the matrix of correlations using the seaborn heatmap (Jain, 2024).  
-Notable insights were:
+---
+**Notable insights were**: 
 - The charges variable is positively correlated with age, BMI and children variables. Each of these variables have a positive linear relationship with the target variable. Therefore, for an increase in any one of the variables charges will increase too. 
 - The correlation heat map confirms minimal correlation between independent variables, indicating that there is no multicollinearity that will contradict the multicollinearity assumption of linear regression.
 - 0.79 highest correlation between a pair of variables. It defines a strong positive linear relationship between smoker and charges variables.
