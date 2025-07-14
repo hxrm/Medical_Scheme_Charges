@@ -45,7 +45,7 @@ Preprocessing are the final tasks that must be carried out to ensure that the da
 ## Exploratory Data Analysis
 **Data Collection**: The data was first retrieved form the given csv file using `Pandas.read_csv()` method as displayed in figure 1. The data was stored in a Pandas data frame, theses data frames are able to store large amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). The `Pandas.head()` method was used to confirm data was successfully retrieved and assess rows and columns of the data. 
 <p align="center">
-  <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03" />
+  <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03" />
   <br>
   <em>Figure 1: Storing Data</em>
 </p>
@@ -54,13 +54,13 @@ Preprocessing are the final tasks that must be carried out to ensure that the da
 
 
 <p align="center">
-  <img width="800" height="400"alt="image" src="https://github.com/user-attachments/assets/12f82654-4767-46c7-857b-1a33086ca356" />
+  <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/12f82654-4767-46c7-857b-1a33086ca356" />
   <br>
   <em>Figure 1: Missing Values</em>
 </p>
-To find duplicates in data panda.duplicated() method was used to identify and create a list of all duplicates within the dataset. The list of duplicates returned one duplicate found in the in row 581 of the dataset as shown below in figure 3. This row was dropped from the dataset to avoid bias in the model. 
+To find duplicates in data `panda.duplicated()` method was used to identify and create a list of all duplicates within the dataset. The list of duplicates returned one duplicate found in the in row 581 of the dataset as shown below in figure 3. This row was dropped from the dataset to avoid bias in the model. 
 <p align="center">
-	<img width="800" height="146" alt="image" src="https://github.com/user-attachments/assets/fa881c86-b712-44fe-8ae4-1a020edec4bf" />
+	  <img width="600" height="120" alt="image" src="https://github.com/user-attachments/assets/fa881c86-b712-44fe-8ae4-1a020edec4bf" />
 	<br>
   <em>Figure 1: Duplicates </em>
 </p>
@@ -77,7 +77,7 @@ To identify the data types `panda.info()` method called. The method returned the
 
 **Data Transformation**: To use machine learning algorithms, all data must be in numerical form, either float or int data types. The categorical features found, sex, smoker and region, are stored as the object data type therefore they were encoded. LabelEncoder from the Scikit-learn preprocessing module to encode the features by mapping each feature to a numbers value. These numbers were then you to distinguish the different categories as seen below in figure 5 (Novogroder, 2024). 
 <p align="center">
-	<img width="800" height="269" alt="image" src="https://github.com/user-attachments/assets/7e86cc33-1bdf-4c53-8169-0b1e0d2b1486" />
+	<img width="600" height="200" alt="image" src="https://github.com/user-attachments/assets/7e86cc33-1bdf-4c53-8169-0b1e0d2b1486" />
 	<br>
   <em>Figure 5: Encoding </em>
 </p>
@@ -89,10 +89,11 @@ To identify the data types `panda.info()` method called. The method returned the
 	<br>
   <em>Figure 6: Descriptive Statistics </em>
 </p>
-- Age Feature: The mean 39.20 is very close to the median 39, this indicates that there is symmetrical distribution in the spread of data. The std of 14.0 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of age in the dataset. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members age falling between 27 and 64 years old. 
-- BMI: The mean 30.6 is very close to the median 30.4, this indicates that there is symmetrical distribution in the spread of data. The std of 6.09 is a low value compared to the features mean, implying that there is low variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members BMI is between 26.29 and 34.69. The difference between the 75th percentile of 34.69 and max value 53.1 further suggests the presence of outliers in the feature. 
-- Children: The mean 1.09 is higher than the median 1.0, this indicates that the distribution of data is positively skewed, most likely due to the max value of 5 children for a member. The std of 1.2 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members number of children is between 0 and . 
-- Charge: The mean $13 270 is much higher than the median charge $9 382, this indicates that the distribution of data is positively skewed, most likely due to the max value of $63 770. The std of $12 110 is a larger value compared to the features mean, implying that there is high variability within the spread of insurance charges. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members pay charges between $4 740 and $16 639. The larger difference between the 75th percentile and max value further suggests the presence of outliers in the feature.
+* **Age Feature**: The mean 39.20 is very close to the median 39, this indicates that there is symmetrical distribution in the spread of data. The std of 14.0 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of age in the dataset. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members age falling between 27 and 64 years old.
+* **BMI**: The mean 30.6 is very close to the median 30.4, this indicates that there is symmetrical distribution in the spread of data. The std of 6.09 is a low value compared to the features mean, implying that there is low variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members BMI is between 26.29 and 34.69. The difference between the 75th percentile of 34.69 and max value 53.1 further suggests the presence of outliers in the feature. 
+* **Children**: The mean 1.09 is higher than the median 1.0, this indicates that the distribution of data is positively skewed, most likely due to the max value of 5 children for a member. The std of 1.2 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members number of children is between 0 and . 
+* **Charges**: The mean $13 270 is much higher than the median charge $9 382, this indicates that the distribution of data is positively skewed, most likely due to the max value of $63 770. The std of $12 110 is a larger value compared to the features mean, implying that there is high variability within the spread of insurance charges. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members pay charges between $4 740 and $16 639. The larger difference between the 75th percentile and max value further suggests the presence of outliers in the feature.
+
 
 Univariate analysis for categorical features was carried out using visualisation tools from seaborn and matplotlib. Seaborn count plots were used to understand the distribution sex, region, charges and smokers in the dataset. The below figure 7 shows the count plot for smokers and non-smokers members in the dataset. The counter plot indicates that the number of members who are non-smoke in the dataset is greater than the number of smokers in the dataset.
 <p align="center">
@@ -110,7 +111,7 @@ Univariate analysis for categorical features was carried out using visualisation
 	<br>
   <em>Figure 8: Correlation Heatmap</em>
 </p>
-Figure 8 above display a correlation heat ma. This was used to shows the correlation between all variables in a dataset. The Pandas method `dataframe.corr()` is used to calculate the correlation coefficient for each variable in the dataset (NumFOCUS Inc, 2025). The method returns a float between 1 and -1, indicating the correlation between each pair of variables (NumFOCUS Inc, 2025). 1 indicates perfect correlation, 0 indicates no correlation and -1 perfect negative correlation. This visual the matrix of correlations using the seaborn heatmap (Jain, 2024).  
+Figure 8 above display a correlation heat map. This was used to shows the correlation between all variables in a dataset. The Pandas method `dataframe.corr()` is used to calculate the correlation coefficient for each variable in the dataset (NumFOCUS Inc, 2025). The method returns a float between 1 and -1, indicating the correlation between each pair of variables (NumFOCUS Inc, 2025). 1 indicates perfect correlation, 0 indicates no correlation and -1 perfect negative correlation. This visual the matrix of correlations using the seaborn heatmap (Jain, 2024).  
 Notable insights were:
 - The charges variable is positively correlated with age, BMI and children variables. Each of these variables have a positive linear relationship with the target variable. Therefore, for an increase in any one of the variables charges will increase too. 
 - The correlation heat map confirms minimal correlation between independent variables, indicating that there is no multicollinearity that will contradict the multicollinearity assumption of linear regression.
