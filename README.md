@@ -4,12 +4,12 @@ The analysis will include steps to understanding both the individual and combine
 ## Explanatory Data Analysis (EDA): 
 Data exploration is a crucial step that needs to be taken before attempting to build a model. EDA helps an analysist to understand the given data. The EDA process identifies issues that may affect machine learning, ensures that data will be of suitable quality and identifies key patterns and trends that may need to be taken into consideration when building a predictive model (Ray, 2024). Various functions from the Pandas, Seaborn and Matplotlib libraries will be used to assist the EDA process. The EDA will include the following steps.
 
-**Data Collection** : The first step to analysing the data is to retrieve it from the given csv file. The Pandas.read_csv() method will be used to read the data from the file and store is within a Pandas data frame object. The Pandas data frames can hold huge amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). 
+**Data Collection** : The first step to analysing the data is to retrieve it from the given csv file. The `Pandas.read_csv()` method will be used to read the data from the file and store is within a Pandas data frame object. The Pandas data frames can hold huge amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). 
 
 **Data Cleaning**: To help ensure data quality missing vales, duplicates and inconsistencies in data types must be handled.
-- Missing Values: panda.isnull().sum() will be used to search the dataset and return the sum of missing values for each column. Identified values will either be dropped or replaced with relevant columns average.
-- Duplicated data: panda.duplicated() will be used to identify and create a list of all duplicates within the dataset. The list of duplicates will then be removed from the dataset to avoid introducing bias. 
-- Data type consistency: panda.info() will be used to identify data types in the given dataset. This is important to ensure all data is numerical and as input for a linear algorithm. Data types that are not quantitative will be encoded or transformed to numeric form.   
+- Missing Values:` panda.isnull().sum()` will be used to search the dataset and return the sum of missing values for each column. Identified values will either be dropped or replaced with relevant columns average.
+- Duplicated data: `panda.duplicated()` will be used to identify and create a list of all duplicates within the dataset. The list of duplicates will then be removed from the dataset to avoid introducing bias. 
+- Data type consistency: `panda.info()` will be used to identify data types in the given dataset. This is important to ensure all data is numerical and as input for a linear algorithm. Data types that are not quantitative will be encoded or transformed to numeric form.   
 
 **Data Transformation**: To use machine learning algorithms, all data must be in numerical form, either float or int data types. The categorical features sex, smoker and region must therefore be transformed. 
 - Encode data: Features in the dataset that are the object data type will be encoded to transform to numeric form. LabelEncoder from the Scikit-learn preprocessing module will convert the values within sex, smoker and region features. The features will contain numbers to label each different category (Novogroder, 2024).
@@ -26,9 +26,9 @@ This is analysis extends the bivariate analysis but is carried out on more than 
 ## Pre Processing: 
 Preprocessing are the final tasks that must be carried out to ensure that the data meets all requirements to be useful machine learning purposes (Novogroder, 2024). Tasks include scaling, encoding and splitting data to ensure that the model performs well (Novogroder, 2024). This stage will include various modules from the Scikit-learn library to prepare the data for processing.
 
-**Data scaling**:Each feature in the dataset may have a different scale, this leads the model  to perceive features with larger values to have greater significance and produce inaccurate predictions. Scaling the dataset ensure that features have fair contribution. The Scikit MinMaxScaler() and StandardScaler() methods will be considered to scale the features within the dataset (GeeksforGeeks, 2025a).  
+**Data scaling**:Each feature in the dataset may have a different scale, this leads the model  to perceive features with larger values to have greater significance and produce inaccurate predictions. Scaling the dataset ensure that features have fair contribution. The Scikit `MinMaxScaler()` and `StandardScaler()` methods will be considered to scale the features within the dataset (GeeksforGeeks, 2025a).  
 
-**Feature Selection**: Feature selection will be performed through either backward elimination or sklearn.selectKBest(). This is important as to only include features that offer meaning contribution to the prediction. By only including significant  features the performance and accuracy of the model will be enhanced(Imarticus, 2024) .
+**Feature Selection**: Feature selection will be performed through either backward elimination or `sklearn.selectKBest()`. This is important as to only include features that offer meaning contribution to the prediction. By only including significant  features the performance and accuracy of the model will be enhanced (Imarticus, 2024) .
 
 **Splitting data**: Data will be split before input into model. The data will be split into an 80:20 ratio, 80 percent of the data being used as training data and the remaining 20 percent for test data. This is an important step so that after training the model can be tested on unseen data to assess its performance (Gillis, 2024). 
 
@@ -40,261 +40,149 @@ Preprocessing are the final tasks that must be carried out to ensure that the da
 **Visualisation of results**: Seaborn and Matplotlib will be used to display the result (Deepanshi, 2023; KIm, 2023). Plots such as  
 - True vs Predicted Values, to compare predictions to actual datapoint and assess linearity   
 - Residuals vs Predicted Values, to assess the Homoscedasticity of model of model results. 
-- Normal Q-Q Residual Plot, to assess if residuals are normally distributed  
+- Normal Q-Q Residual Plot, to assess if residuals are normally distributed
+
 ## Exploratory Data Analysis
-**Data Collection**: The data was first retrieved form the given csv file using Pandas.read_csv() method as displayed in figure 1. The data was stored in a Pandas data frame, theses data frames are able to store large amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). The Pandas.head() method was used to confirm data was successfully retrieved and assess rows and columns of the data. 
+**Data Collection**: The data was first retrieved form the given csv file using `Pandas.read_csv()` method as displayed in figure 1. The data was stored in a Pandas data frame, theses data frames are able to store large amount of data in excel like format, making it ideal to store insurance dataset and perform data manipulation (NumFOCUS Inc, 2024). The `Pandas.head()` method was used to confirm data was successfully retrieved and assess rows and columns of the data. 
 <p align="center">
   <img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03" />
   <br>
   <em>Figure 1: Storing Data</em>
 </p>
 
-
-## Account Creation
-![image](https://github.com/user-attachments/assets/ad999f14-c608-4595-9a18-e6b5d9e34319](https://github.com/user-attachments/assets/08258570-b652-4127-912e-7a8e754e4c03))
-
-### Navigating to Registration:
-   - Find and click on the "Register" link on the login page. 
-
-### Complete Registration Form:
--	Fill in the required information and click on register to create your account.
--	Enter your name, surname, email address, and choose a secure password.
-![image](https://github.com/user-attachments/assets/92ced83d-8af2-4b1f-861c-31fc27da5d8f)
-
-### Submission:
-   - Click the "Register" button to create your account.
-
-![image](https://github.com/user-attachments/assets/a849837d-f72d-40a0-a13f-9406c0d02269)
-
-## Logging In
-![image](https://github.com/user-attachments/assets/7ecbfde8-0ef2-4a9f-9942-9ca82eb8d03a)
-
- 
-Open the website:
--	Open your preferred web browser.
--	Enter the website's URL.
-At the Login Page and enter your credentials:
--	Input your registered email address and password in the respective fields.
--	Click Login."
--	![image](https://github.com/user-attachments/assets/8fa747e1-ddbf-4104-9bee-37cde1fe21d6)
-
- 
-## Home Dashboard Overview
-### Home Dashboard
-Upon logging in, you will see the home dashboard page which serves as the central hub with links to key sections of the website and module functions. 
-![image](https://github.com/user-attachments/assets/5a5a7478-3ce1-490f-b61b-f19c80221646)
- 
-## Navigation
-Use the navigation menu to access different sections of the website.
-Navigation:
-   - Easily navigate to “Create New Module”, ”View Modules”, “Record Study Modules” “View Study Progress” or “View Study Progress Graph”.
-
-## Module Creation
-### Accessing Module Creation
-Navigate to the "Create Module" section”
--	Click on "Create New Module." Via the home page or navigation menu.
-![image](https://github.com/user-attachments/assets/dd1df736-307c-4261-8fb0-d5a9f5618a36)
-
- 
-### Semester Details
-When creating a module for the first time, you'll be prompted to provide your semester details:
--	Fill in module details such as start date, end date, and any additional information.
-	![image](https://github.com/user-attachments/assets/294b70a3-bed1-4561-bb41-ddc1811cb864)
- 
-### Creating a New Module
-Fill in module details in the form page:
--	Module Code, enter a unique code for the module (e.g., PROG6212).
--	Module Name, supply a descriptive name for the module (e.g., Programming 2B).
--	Number of Credits, specify the credit value for the module (e.g., 15).
--	Class Hours per Week, indicate the number of hours of in-class instruction per week (e.g., 5).
-  ![image](https://github.com/user-attachments/assets/33de4be2-a4fa-4c64-8ef8-3d1588dec687)
-
- 
-### Saving and Submitting
-To save module click “Create Module” and then “Next” to return to homepage.
-Click “Create Module”:
--	Continue creating module by entering the new module data within the form or click “Next” if done.
-  ![image](https://github.com/user-attachments/assets/440cf95e-c617-452e-af89-90ecbea59c91)
-
-Confirmation Message: A confirmation message will appear, acknowledging the successful creation of the module.
-![image](https://github.com/user-attachments/assets/88d7d2ec-d50e-45d3-a060-b22542e4dd97)
-
- 
-
-## Module Viewing
-### Accessing Modules
-Navigate to the "View Modules" section to see a list of all modules for the semester.
- ![image](https://github.com/user-attachments/assets/57844fd9-cd32-4878-bd3c-a7cd57a4def7)
-
-
-## Record of Studied Hours
-
-To record your studied hours for a specific module, follow these steps:
-
-### Record Studied Hours for a Module: 
-Navigate to the " Record Study Hours " section and select the desired module from the dropdown list.  
-![image](https://github.com/user-attachments/assets/43fdb103-e0de-4ed0-9222-247c61d2db06)
-
- ![image](https://github.com/user-attachments/assets/98b40203-503f-4d29-890a-eb7bf31d3620)
-
-
-
-### Select Date:
-Input or click on the calendar icon and a calendar interface will appear. Select the date you want to record your study hours for.
-  ![image](https://github.com/user-attachments/assets/c47a6469-3052-4d3d-a2d1-7602466e5b6b)
-
-![image](https://github.com/user-attachments/assets/9dfa4a7e-2a21-4d47-9277-5dbd73f99a4b)
-
-### Input Study Hours:
-Once the date is selected, input the number of hours you dedicated to studying for that session.
- 
-![image](https://github.com/user-attachments/assets/91b26a80-69cd-40f7-afaa-3769e0c02d07)
-
- 
-### Save:
-Click the "Save" button to confirm and save your recorded study hours.
- ![image](https://github.com/user-attachments/assets/87733b2e-c938-4112-bbca-aa2175074a2f)
-
-Confirmation Message: A confirmation message will appear, acknowledging the successful recording of your study hours.
-![image](https://github.com/user-attachments/assets/0daf53b5-34dc-4a65-8e28-a0ddbf248592)
-
- 
-This process allows you to precisely record your study efforts for each module on specific dates. The dropdown list, calendar interface, and confirmation message enhance user experience and provide a systematic way to keep track of your study sessions. 
-
-
-### Weekly Study Progress
-Navigate to the " View Stud Progress " section and select the desired module and week to display.
-5.4.1 Selecting Module and Week
- Module Selection:
--	Use the dropdown list to select the module you want to review.
-  ![image](https://github.com/user-attachments/assets/038e8a17-b077-41d9-92b9-8ab93c5b5072)
-
- 
-Week Selection:
--	Choose the specific week you want to analyze from the dropdown box.
--	 ![image](https://github.com/user-attachments/assets/563fa5ef-5d82-4b26-a61a-2d0107a7e22b)
-
-### Displayed Information
-After selecting the module and week, the following information will be displayed:
--	Module Code, the code associated with the selected module.
--	Hours Studied, the total number of hours you have studied for the selected module during the chosen week.
--	Remaining Hours, the remaining hours recommended for study based on your ideal study hours and the current week's progress.
--	![image](https://github.com/user-attachments/assets/430e53f6-50f1-4ae7-b06f-25672196376e)
--	![image](https://github.com/user-attachments/assets/296d1a3e-e1f8-47ae-b12f-76480b70be10)
-
- 
- 
-
-This detailed breakdown provides a focused view of your study efforts for a specific module during a particular week, helping you manage your time effectively and stay on top of your academic commitments.
-
-
-## Module Study Progress Graph 
-Navigate to the "View Study Progress Graph" section and select the desired module to display.
-![image](https://github.com/user-attachments/assets/639f7e9e-0e53-44a2-8d51-8726ac89a9fc)
-
- 
-
-### Selecting Module
-Module Selection:
--	Use the dropdown list to select the module you want to review.
--	 ![image](https://github.com/user-attachments/assets/9063e732-433b-4143-8c17-42b1b12d2c39)
-
-
-### Displayed Graph
-After selecting the module, the system will display a bar graph representing the study progress for the chosen module.
-![image](https://github.com/user-attachments/assets/14206d16-7516-45e7-8ca8-77877ac366ad)
-
- ![image](https://github.com/user-attachments/assets/0171d0d7-a12b-46ce-a06d-4f4b489ae46b)
-
-
-Graph Information:
-•	Y-Axis (Hours): Represents the total number of hours studied.
-•	X-Axis (Weeks): Indicates the weeks under consideration.
-Graph Elements:
-•	Actual Hours of Study: The bars will show the actual hours of study completed for each week.
-•	Ideal Study Hours: A reference line on the graph will indicate the ideal study hours for each week.
- 
-![image](https://github.com/user-attachments/assets/ac065bf5-c757-409d-9975-2076ae67d9be)
-
-### Information Overlay
-Additionally, the page will display a key for the graph and hovering over each bar on the graph will display detailed information:
-•	Week: The specific week in consideration.
-•	Actual Hours of Study: The exact number of hours studied during that week.
-•	Ideal Study Hours: The recommended ideal study hours for that week.
-![image](https://github.com/user-attachments/assets/31a45397-c5fe-4538-9e89-e2b0e84d1005)
-
-
- 
-This graphical representation provides a visual insight into your study progress, allowing you to compare your actual study hours with the recommended ideal study hours. It helps in identifying trends, evaluating consistency, and making informed adjustments to your study routine.
-
-# Student Study Hub
-
-## Overview
-
-Student Study Hub is a ASP.NET Web Application Console App developed on the .NET framework 4.8.
-Student Study Hub is a web-based application designed to enhance the academic experience of students by providing tools to manage and optimize their study routines for the semester. This application allows students to seamlessly input and manage details of their modules, track study hours, monitor their progress throughout the semester and view their progress.
-The Study Tracker Application serves as a valuable tool for enhancing the learning experience throughout the semester. 
-THE WEBSITE NO LONGER AVALIBLE ON THE AZURE, AS SCHOOL PROVIDED HOSTING SERVIES HAVE BEEN DEACTIVATED 
-
-
-## Usage
-The Student Study Hub application is designed to help you effectively manage your semester by tracking module information and study hours. Follow these step-by-step instructions to make the most out of the application:
-### User Account 
-Register an Account: 
-Before utilizing the web application's features, create an account.Upon launching the website, land on the login page with navigation to register an account if not already registered.
--	To login a user will be required to input their email address along with an formatted password.
--	To register a user will be required to input their name, surname, email address and password. If the email address has not been registered an account will be created.
-
-### Creating Modules
-1.	Launching the Website: 
-
-Users can add modules for the semester by navigating to the "Create Module" section either located on the navigation bar or on the home page to add modules for your current semester.
-
-2.	Enter Semester Data:
-Set the start date for the first week of the semester, choose the start date for the first week of the semester by clicking on the calendar icon and selecting the date in the calendar view.
-
-Enter the total number of weeks in the semester.
-3.	Enter Module Information:
-On the “Create Module” page, provide the following details for each module:
-- Module Code:** Enter a unique code for the module (e.g., PROG6212).
-- Module Name:** Supply a descriptive name for the module (e.g., Programming 2B).
- - Number of Credits:** Specify the credit value for the module (e.g., 15).
-  - Class Hours per Week:** Indicate the number of hours of in-class instruction per week (e.g., 5).
-
-4. Saving Module Information:
-   - Once you've filled in the module details, click the "Save" button to store the module information.
-
-### Tracking Study Hours
-Recording Study Hours:
-To record the number of hours spent studying a specific module on a particular date, navigate to the "Record Study Hours" page from the navigation bar or home page. Follow these steps:
--	Select the module you wish to update from the dropdown list on page.
--	Select the “Study Date” from the calendar from the view by clicking on the calender icon and selecting the date. 
--	Enter the “Studied Hours” by input the hours devoted to studying for the module in the textbox.
--	Click "Save" to record your study hours.
-
-### Monitoring Progress
-Viewing Module Information:
-The application automatically calculates and displays the number of self-study hours required for each module per week based on the provided data. To access this information, select the "View Modules" from the navigation bar or homepage. This feature assists you in planning your study schedule effectively.
-
-Monitoring Remaining Self-Study Hours:
-The software continuously updates and displays the remaining self-study hours for each module for the current week. You can access this information by selecting "Study Progress " from the navigation bar or homepage. The calculation considers the hours recorded on specific dates to provide an accurate overview of your progress. On the Study Progress page,
--	Select the module you wish to view from the dropdown list on page.
--	Select the study week you wish to view from the dropdown list on page.
--	Module hours for the chosen week will be display, click "Home" to return to home page.
-
-
-### Application Behavior
-
-Data Storage on Azure:
-Student Study Hub leverages Azure SQL Database for robust data storage to maintain data persistence. All user-related information, including usernames and securely hashed passwords, is stored in the designated Azure SQL Database. This cloud-based solution ensures data reliability, scalability, and accessibility.
-
-.
-
-User Registration and Password Management on Azure:
-Users can seamlessly register within the application using a unique username and password. The application employs a secure approach by storing only the hash of the user's password in the Azure SQL Database. This cryptographic method enhances security by preventing the storage of sensitive information in plain text.
-
-Exiting the Application:
-Users enjoy the flexibility to perform various actions within the application hosted on Azure. The application ensures a smooth exit process, allowing users to securely log out, terminate their session, or exit the application altogether. This enhances the overall user experience and ensures the security of user interactions on the Azure platform.
+**Data Cleaning:**: `panda.isnull().sum()` was used to the dataset for missing values and return the sum of missing values for each column. There were no missing values found in the dataset, this can be seen in figure 2 below. 
+
+
+<p align="center">
+  <img width="800" height="400"alt="image" src="https://github.com/user-attachments/assets/12f82654-4767-46c7-857b-1a33086ca356" />
+  <br>
+  <em>Figure 1: Missing Values</em>
+</p>
+To find duplicates in data panda.duplicated() method was used to identify and create a list of all duplicates within the dataset. The list of duplicates returned one duplicate found in the in row 581 of the dataset as shown below in figure 3. This row was dropped from the dataset to avoid bias in the model. 
+<p align="center">
+	<img width="800" height="146" alt="image" src="https://github.com/user-attachments/assets/fa881c86-b712-44fe-8ae4-1a020edec4bf" />
+	<br>
+  <em>Figure 1: Duplicates </em>
+</p>
+
+To identify the data types `panda.info()` method called. The method returned the below information about the dataset features. The method found that the 7 features within the dataset was a combination of ints, floats and objects, as shown in below in figure 4. 
+- 2 of the columns, age and children are int datatypes and therefore suitable for a machine learning algorithms input. 
+- 2 of the columns, charges and BMI are floats datatypes are too suitable as input for machine learning algorithms 
+- 3 of the column’s datatypes are objects or string values which need to be converted to numerical values for to be used as input for the machine learning algorithms    
+<p align="center">
+	<img width="800" height="321" alt="image" src="https://github.com/user-attachments/assets/c964d985-8efe-4ad1-8aa7-1579925bc6b1" />
+	<br>
+  <em>Figure 4: Datatypes </em>
+</p>
+
+**Data Transformation**: To use machine learning algorithms, all data must be in numerical form, either float or int data types. The categorical features found, sex, smoker and region, are stored as the object data type therefore they were encoded. LabelEncoder from the Scikit-learn preprocessing module to encode the features by mapping each feature to a numbers value. These numbers were then you to distinguish the different categories as seen below in figure 5 (Novogroder, 2024). 
+<p align="center">
+	<img width="800" height="269" alt="image" src="https://github.com/user-attachments/assets/7e86cc33-1bdf-4c53-8169-0b1e0d2b1486" />
+	<br>
+  <em>Figure 5: Encoding </em>
+</p>
+
+
+**Univariate Analysis**: This stage of analysis focused on analysing individual feature in the dataset. For features that are continuous values, the `panda.describe()` method was used to print the descriptive statistics for the DataFrame. The summary uncovered the distribution, central tendency and the variability for each numeric feature within the dataset (Ray, 2024). Figure 6 displays the descriptive statistics.
+<p align="center">
+	<img width="800" height="429" alt="image" src="https://github.com/user-attachments/assets/e8c99772-6b1b-4036-a4af-49463234d732" />
+	<br>
+  <em>Figure 6: Descriptive Statistics </em>
+</p>
+- Age Feature: The mean 39.20 is very close to the median 39, this indicates that there is symmetrical distribution in the spread of data. The std of 14.0 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of age in the dataset. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members age falling between 27 and 64 years old. 
+- BMI: The mean 30.6 is very close to the median 30.4, this indicates that there is symmetrical distribution in the spread of data. The std of 6.09 is a low value compared to the features mean, implying that there is low variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members BMI is between 26.29 and 34.69. The difference between the 75th percentile of 34.69 and max value 53.1 further suggests the presence of outliers in the feature. 
+- Children: The mean 1.09 is higher than the median 1.0, this indicates that the distribution of data is positively skewed, most likely due to the max value of 5 children for a member. The std of 1.2 is a moderate value compared to the features mean, implying that there is moderate variability within the spread of dataset feature. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members number of children is between 0 and . 
+- Charge: The mean $13 270 is much higher than the median charge $9 382, this indicates that the distribution of data is positively skewed, most likely due to the max value of $63 770. The std of $12 110 is a larger value compared to the features mean, implying that there is high variability within the spread of insurance charges. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members pay charges between $4 740 and $16 639. The larger difference between the 75th percentile and max value further suggests the presence of outliers in the feature.
+
+Univariate analysis for categorical features was carried out using visualisation tools from seaborn and matplotlib. Seaborn count plots were used to understand the distribution sex, region, charges and smokers in the dataset. The below figure 7 shows the count plot for smokers and non-smokers members in the dataset. The counter plot indicates that the number of members who are non-smoke in the dataset is greater than the number of smokers in the dataset.
+<p align="center">
+	<img width="800" height="636" alt="image" src="https://github.com/user-attachments/assets/79508759-2d21-43ed-93fa-d9dea6c9bbb3" />
+	<br>
+  <em>Figure 7: Smokers Count Plot</em>
+</p>
+
+
+
+**Bivariate Analysis**: This stage of analysis focuses on uncovering the association and distribution between two variables. To understand the relationship between two variables visualisation tools such as seaborn and matplotlib will be used to create correlation heatmaps, pair plots, distribution plots and scatterplots. 
+<img width="751" height="586" alt="image" src="https://github.com/user-attachments/assets/d09228d4-cc9a-4b25-87ca-fb1231cc0b9d" />
+<p align="center">
+	<img width="800" height="636" alt="image" src="https://github.com/user-attachments/assets/79508759-2d21-43ed-93fa-d9dea6c9bbb3" />
+	<br>
+  <em>Figure 8: Correlation Heatmap</em>
+</p>
+Figure 8 above display a correlation heat ma. This was used to shows the correlation between all variables in a dataset. The Pandas method `dataframe.corr()` is used to calculate the correlation coefficient for each variable in the dataset (NumFOCUS Inc, 2025). The method returns a float between 1 and -1, indicating the correlation between each pair of variables (NumFOCUS Inc, 2025). 1 indicates perfect correlation, 0 indicates no correlation and -1 perfect negative correlation. This visual the matrix of correlations using the seaborn heatmap (Jain, 2024).  
+Notable insights were:
+- The charges variable is positively correlated with age, BMI and children variables. Each of these variables have a positive linear relationship with the target variable. Therefore, for an increase in any one of the variables charges will increase too. 
+- The correlation heat map confirms minimal correlation between independent variables, indicating that there is no multicollinearity that will contradict the multicollinearity assumption of linear regression.
+- 0.79 highest correlation between a pair of variables. It defines a strong positive linear relationship between smoker and charges variables.
+With the strongest correlation between features smoker and charges, I was led to more thoroughly investigate the correlation between smoker and charges and further, the influence smoker and charges may have on other features in the dataset. 
+
+The below plot provides in figure 9 shows an in-depth view of the distribution of insurance charges for both smokers and non-smokers. 
+
+<p align="center">
+	<img width="800" height="654" alt="image" src="https://github.com/user-attachments/assets/f48b977f-a21f-45d7-927b-deb1c6633444" />
+	<br>
+  <em>Figure 9: Charges Distribution by Smoker Status</em>
+</p>
+
+*Smokers (Peach)*:
+- The plot show there are fewer members with smoking status within the dataset. The bars representing smoker, do not exceed 25 on the y-axis showing a significant difference in the count for smoking vs non-smoking members. 
+- The graph shows a bimodal distribution, with peaks approximately falling between $10,000 to $30,000 and $30,000 to $60,000. This distribution suggests that other features may have a strong contribution to a decrease in the charged insurance fee despite smoking status (Frost, 2022). 
+*Smokers (Blue)*:
+- The plot show that most members in dataset are of non-smoking status. The bars representing non-smoker, ranges across all values on the y-axis showing a significant difference in the count for smoking vs non-smoking members. 
+- the graph shows a right skewed distribution, with non-smoking members incurring charges of $1,121 (min value) to approximately $15 000. The upper tail of the non-smoking curve does fall within higher charge rate, indicating that there are features may have a strong contribution to an increase in the charged insurance fee despite smoking status.  
+
+The plot of Charges Distribution by Smoker Status, confirmed the strength of the correlation between smoker and the rate of charge, uncovered correlation heatmap (figure 10). Thus confirming the smoking status of a member is a significant in the charges incurred by a member. 
+
+
+**Multivariate Analysis**: multivariate analysis extends the bivariate analysis by further investigating the significant finding. In this can the correlation between smoker and the charged rate of members. The analysis stage was aimed at understanding the relationship between multiple variables. Tools from seaborn and matplotlib will be used to visualise the relations between variables. Plots such as distribution plots and scatterplots will carry out this stage (Deepanshi, 2023; Kim, 2023). 
+The bar plot in figure 10, provides an insight into the distribution of insurance charges for both smokers according to sex.
+<p align="center">
+	<img width="800" height="509" alt="image" src="https://github.com/user-attachments/assets/b7fa3e40-9698-4a64-a906-e56d6b6350ee" />
+	<br>
+  <em>Figure 10: Average Charges for Smokers and Non-Smokers</em>
+</p>
+- Non-smoker: For both male and female members, lower insurance charges are incurred by non-smokers
+- Smoker: For both male and female members, higher insurance charges are incurred by smokers.
+High and low insurance rates are charges for both females and males, therefore the sex of a member when concerning charges are indifferent.This indicated that the sex of a member had no significant influence on the rate of charges on a member. 
+
+
+The below scatter plots in figure 11, provides an insight into the distribution of insurance charges across member’s age. Separated by smoking status. The below plots were intended to further to further investigate the influence of chargers and smoking status in the dataset.
+<p align="center">
+	<img width="800"  height="467" alt="image" src="https://github.com/user-attachments/assets/4feb7708-ceca-4b82-81ef-7fd85c581bf1" />
+	<br>
+  <em>Figure 11: Charges vs Age (Smokers and Non-Smokers)</em>
+</p>
+Scatter plot 1 (Charge vs age by Non-Smoking Members): 
+- By plotting a regression line, a positive correlation between age and charges can be observed for non-smoking members. This indicates the insurance charge for a member increase with their age. Therefore, younger members receive lower rates than older members.
+Scatter plot 2 (Charge vs age by Smoking Members):
+- Similarly, a plotted regression line, plot 2 shows a positive correlation between age and charges for smoking members. The plot indicates the insurance charge for a member increase with their age. However, the rates for smoking members are much larger as the line is plotted higher up on the y-axis compared to plot 1. Therefore, members that smoke incur higher rates both young and old members.
+- Another insight from the second plot is gathered from the separation is clusters. Although the data point follow a linear trend, they are clustered separately in the lower and upper regions of the y-axis. This separation implies that there is another lifestyle factors or factors that cause this variation and thereby contribute to higher charge rates.
+
+These finding indicates that there is a positive correlation between the age and charge features in the dataset, suggesting that age too has significance in the rate of charge for a member. When combined with the smoking feature, the rate of charges becomes even larger. 
+
+The below scatter plots in figure 12, provides an insight into the distribution of insurance charges across member BMI. Separated by smoking status. The below plots were intended to further to further investigate the influence of chargers and smoking status in the dataset.
+<p align="center">
+	<img width="800"  height="467" alt="image" src="https://github.com/user-attachments/assets/1bc119ef-af57-40b0-bfe4-b26ca3aa2602" />
+	<br>
+  <em>Figure 12: Charge vs BMI (Non-smoking and Smoking)</em>
+</p>
+
+Scatter plot 1 (Charge vs BMI of non-smoking members): 
+- By plotting a regression line, a moderate positive correlation can be observed between BMI and charges for non-smoking members. This indicates the insurance charge of a member increases with a higher BMI. Therefore, overweight and obese members receive higher charges.
+Scatter plot 2 (Charge vs BMI of smoking members):
+- Similarly, a plotted regression line, plot 2 shows a strong positive correlation between BMI and charges for smoking members. The plot indicates the insurance charges for a member increase with higher BMI. However, the rates for smoking members are more extreme. Therefore, the combination of smoking and a high BMI result in high insurance rates.  
+With highlighting the smoking status of members, a linear relationship become clear. There is a positive relationship between BMI and charges, however the smoking status determines stronger degree of influence between the variables. 
+
+These finding suggesting that BMI feature has significance influence on the rate of charge for a member. When combined with the smoking feature, the rate of charges becomes even larger. 
+The finding from the EDA conclude that features BMI, smoker and age have and influence on the dependent variable, charges. 
+
+**Pre Processing**: The final tasks carried out before training the model included scaling, encoding and splitting data to ensure that the model performs well (Novogroder, 2024). Various modules from the Scikit-learn library were used to prepare the data for processing.
+- Data scaling: The Scikit `StandardScaler()` methods was used to scale features within the dataset in preparation for model training. This was to ensure larger values such as BMI and Age did not have disproportionate significance in the model which would result in inaccurate predictions.
+  <img width="380" height="175" alt="image" src="https://github.com/user-attachments/assets/631dba8f-0415-4110-ae91-c1d78e6d44ba" />
+
+- Feature Selection: Feature selection will be performed by both backward elimination and `sklearn.selectKBest()` to compare results. SelectKBest was used with the `f_regression` parameter and a max output of 3. The method selected the best based upon the F-value, which indicates the variance between each feature and the dependent variable. The features are scored according to the significance of their variance (Kavya D, 2023). Backward elimination selects the best features based upon the p-value which indicates probability of a features significance. The best features for selections by removing features that are not significant (GeeksforGeeks, 2025b).  Both methods nominated the same features, smoker, age and BMI. Which are consistent with EDA finding, the results are shown below in figure 14.
+- <img width="940" height="296" alt="image" src="https://github.com/user-attachments/assets/d632494e-3355-4a9a-b4cc-0ad9d37be4fb" />
 
 
 ## References
