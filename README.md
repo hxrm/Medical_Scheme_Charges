@@ -96,6 +96,32 @@ To identify the data types `panda.info()` method called. The method returned the
 * **Charges**: The mean $13 270 is much higher than the median charge $9 382, this indicates that the distribution of data is positively skewed, most likely due to the max value of $63 770. The std of $12 110 is a larger value compared to the features mean, implying that there is high variability within the spread of insurance charges. This variability is confirmed by the 25th and 75th percentile which shows that 50% of members pay charges between $4 740 and $16 639. The larger difference between the 75th percentile and max value further suggests the presence of outliers in the feature.
 
 
+**Univariate Analysis**  
+This stage of analysis focused on analysing individual features in the dataset. For features with continuous values, the `pandas.describe()` method was used to print descriptive statistics. The summary uncovered the distribution, central tendency, and variability of each numeric feature in the dataset (Ray, 2024).  
+Figure 6 displays the descriptive statistics:
+
+<div align="center">
+  <img width="800" height="429" alt="Descriptive Stats" src="https://github.com/user-attachments/assets/e8c99772-6b1b-4036-a4af-49463234d732" />
+  <br />
+  <em>Figure 6: Descriptive Statistics</em>
+</div>
+
+---
+
+- **Age Feature**:  
+  The mean (39.20) is very close to the median (39), indicating a symmetrical distribution. The standard deviation (14.0) suggests moderate variability. The 25th and 75th percentiles (27 and 64) confirm that 50% of members are aged between 27 and 64 years.
+
+- **BMI**:  
+  The mean (30.6) is close to the median (30.4), indicating symmetry. The standard deviation (6.09) indicates low variability. 50% of members have a BMI between 26.29 and 34.69. The max value (53.1) suggests outliers are present.
+
+- **Children**:  
+  The mean (1.09) is higher than the median (1.0), suggesting a positive skew likely caused by the max value of 5 children. The standard deviation (1.2) indicates moderate variability. 50% of members have between 0 and [value missing] children.
+
+- **Charges**:  
+  The mean ($13,270) is much higher than the median ($9,382), indicating a positively skewed distribution. The standard deviation ($12,110) shows high variability. 50% of members pay between $4,740 and $16,639. The max value ($63,770) suggests the presence of outliers.
+
+
+
 Univariate analysis for categorical features was carried out using visualisation tools from seaborn and matplotlib. Seaborn count plots were used to understand the distribution sex, region, charges and smokers in the dataset. The below figure 7 shows the count plot for smokers and non-smokers members in the dataset. The counter plot indicates that the number of members who are non-smoke in the dataset is greater than the number of smokers in the dataset.
 <p align="center">
 	<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/79508759-2d21-43ed-93fa-d9dea6c9bbb3" />
