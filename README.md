@@ -37,7 +37,7 @@ Preprocessing are the final tasks that must be carried out to ensure that the da
 
 **Evaluation**: To evaluate the performance of the models, the Scikit-learn library will be used. The library contains a metrics methods that provide the coefficient of determination (R^2) , mean absolute error and mean squared error for the results or prediction of a trained model (Deepanshi, 2023; Kim, 2023)  These metrics can be used to assess the performance and accuracy of a model.
 
-**Visualisation of results**: Seaborn and Matplotlib will be used to display the result (Deepanshi, 2023; KIm, 2023). Plots such as  
+**Visualisation of results**: Seaborn and Matplotlib will be used to display the result (Deepanshi, 2023; KIm, 2023). Plots such as:
 - True vs Predicted Values, to compare predictions to actual datapoint and assess linearity   
 - Residuals vs Predicted Values, to assess the Homoscedasticity of model of model results. 
 - Normal Q-Q Residual Plot, to assess if residuals are normally distributed
@@ -56,7 +56,7 @@ Preprocessing are the final tasks that must be carried out to ensure that the da
 <div align="center">
   <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/12f82654-4767-46c7-857b-1a33086ca356" />
   <br>
-  <em>Figure 1: Missing Values</em>
+  <em>Figure 2: Missing Values</em>
 </div>
 To find duplicates in data `panda.duplicated()` method was used to identify and create a list of all duplicates within the dataset. The list of duplicates returned one duplicate found in the in row 581 of the dataset as shown below in figure 3. This row was dropped from the dataset to avoid bias in the model. 
 <div align="center">
