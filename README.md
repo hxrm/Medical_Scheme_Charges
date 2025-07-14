@@ -62,7 +62,7 @@ To find duplicates in data `panda.duplicated()` method was used to identify and 
 <div align="center">
 	  <img width="700" height="120" alt="image" src="https://github.com/user-attachments/assets/fa881c86-b712-44fe-8ae4-1a020edec4bf" />
 	<br>
-  <em>Figure 1: Duplicates </em>
+  <em>Figure 3: Duplicates </em>
 </div>
 
 To identify the data types `panda.info()` method called. The method returned the below information about the dataset features. The method found that the 7 features within the dataset was a combination of ints, floats and objects, as shown in below in figure 4. 
