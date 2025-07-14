@@ -243,22 +243,25 @@ To evaluate the performance of the models, the Scikit-learn library will be used
 
 The coefficient of determination (R^2)  for the Lasso model of 0.78 is close 1 well the Linear model falls slightly lower. This implies, that 78% percent variance is explained by the model.  The mean absolute error of the lasso model indicates that results deviated by $4192.78 
 
+--- 
 
 *True vs Predicted Values, to compare predictions to actual datapoint and assess linearity*
 <div align="center">
-<img width="940" height="509" alt="image" src="https://github.com/user-attachments/assets/17150aa2-22aa-4316-9959-99f1ede6f0e0" />
+<img width="700" height="509" alt="image" src="https://github.com/user-attachments/assets/17150aa2-22aa-4316-9959-99f1ede6f0e0" />
 	<br>
 </div> 
 *Residuals vs Predicted Values, to assess the Homoscedasticity of model of model result*
 <div align="center">
-	<img width="500" height="200" alt="image" src="https://github.com/user-attachments/assets/4927b5d0-7ebb-456a-a224-2a9f988e5111" />
+	<img width="700" height="493" alt="image" src="https://github.com/user-attachments/assets/df95edec-5b2b-41fd-96fa-3c0486a6b2bd" />
 	<br>
 </div> 
 *Normal Q-Q Residual Plot, to assess if residuals are normally distributed*
 <div align="center">
-	<img width="940" height="503" alt="image" src="https://github.com/user-attachments/assets/115f80b0-1e66-4a88-afce-dcfa1d0b472d" />
+	<img width="700" height="503" alt="image" src="https://github.com/user-attachments/assets/115f80b0-1e66-4a88-afce-dcfa1d0b472d" />
 	<br>
 </div> 
+
+
 ## References
 Ajaykumar, 2024. Data Science: Guide to Encoding Nominal Categorical Features. | by Ajaykumar Dev | Medium. [online] Available at: <https://medium.com/@nikaljeajay36/data-science-guide-to-encoding-nominal-categorical-features-bf3e622b1133> [Accessed 23 April 2025].
 Akinkugbe, A., 2024. When to Use Linear Regression. Introduction | by Ayo Akinkugbe | Medium. [online] Available at: <https://medium.com/@ayoakinkugbe/when-to-use-linear-regression-6b7057ebd01f> [Accessed 23 April 2025].
